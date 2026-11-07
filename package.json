@@ -1,0 +1,15 @@
+{
+  "name": "somacos-redesign",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine et catalogue SOMACOS — générateur statique sans dépendance",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "serve": "npx --yes serve@14.2.4 site -l 8080",
+    "dev": "node build/build.mjs && npx --yes serve@14.2.4 site -l 8080"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
