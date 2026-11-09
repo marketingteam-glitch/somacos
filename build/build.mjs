@@ -484,7 +484,7 @@ ${pageHero(rel, { eyebrow: 'Contact', title: 'Contactez-nous.', lead: 'Notre pri
   </div>
 </section>`;
   write('contact/index.html', page({ rel, file: 'contact/index.html', title: 'Contact', active: 'contact',
-    description: 'Contactez SOMACOS à Meknès : +212 535 466 455, info@somacos.ma. Du lundi au vendredi de 8h à 19h, samedi et dimanche de 9h à 14h.',
+    description: 'Contactez SOMACOS à Meknès : +212 535 466 455, info@somacos.ma. Du lundi au vendredi de 8h30 à 17h30, samedi  de 8h30 à 13h30.',
     body, jsonld: [ORG_LD, breadcrumbLd([['', 'Accueil'], ['contact/', 'Contact']])], scripts: ['assets/js/forms.js'] }));
 }
 

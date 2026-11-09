@@ -15,8 +15,8 @@ export const SITE = {
   ],
   emails: ['info@somacos.ma', 'somacos-delta@hotmail.com'],
   hours: [
-    ['Lundi – vendredi', '8h00 – 19h00'],
-    ['Samedi – dimanche', '9h00 – 14h00'],
+    ['Lundi – vendredi', '8h30 – 17h30'],
+    ['Samedi ', '8h30 – 13h30'],
   ],
   team: [
     { name: 'Morad Chahhou', role: 'Directeur technique', tel: '06 61 44 63 19', telHref: 'tel:+212661446319', email: 'morad-chahhou@somacos.ma' },
