@@ -298,7 +298,7 @@ function home() {
   </div>
   <div class="hero-facts">
     <div class="wrap hero-facts-row">
-      <div><b>30 ans</b><span>d’expérience dans l’irrigation agricole</span></div>
+      <div><b>12 ans</b><span>d’expérience dans l’irrigation agricole</span></div>
       <div><b>${products.length}</b><span>produits au catalogue</span></div>
       <div><b>${TOTAL_REFS}</b><span>références et dimensions</span></div>
       <div><b>${PARTNERS.length}</b><span>marques de fabricants</span></div>
@@ -365,7 +365,7 @@ function home() {
   <div class="wrap">
     <div class="section-head reveal"><div><p class="eyebrow">Pourquoi SOMACOS</p><h2 class="display-2" id="why-title">Une expertise reconnue dans tout le Maroc.</h2></div></div>
     <div class="why-grid">
-      <div class="why reveal"><b class="why-k">30 ans</b><h3>D’expérience</h3><p>Une expérience de 30 ans dans l’irrigation agricole.</p></div>
+      <div class="why reveal"><b class="why-k">12 ans</b><h3>D’expérience</h3><p>Une expérience de 12 ans dans l’irrigation agricole.</p></div>
       <div class="why reveal"><b class="why-k">${PARTNERS.length}</b><h3>Marques de fabricants</h3><p>Des systèmes d’irrigation qui proviennent des meilleurs fabricants mondiaux.</p></div>
       <div class="why reveal"><b class="why-k">Ingénieurs</b><h3>À vos côtés</h3><p>Expertise, solutions techniques adaptées, mise en œuvre et suivi de vos installations.</p></div>
       <div class="why reveal"><b class="why-k">Équipe</b><h3>Technico-commerciale</h3><p>Des vendeurs et technico-commerciaux confirmés, informés des nouveaux produits et services.</p></div>
@@ -484,7 +484,7 @@ ${pageHero(rel, { eyebrow: 'Contact', title: 'Contactez-nous.', lead: 'Notre pri
   </div>
 </section>`;
   write('contact/index.html', page({ rel, file: 'contact/index.html', title: 'Contact', active: 'contact',
-    description: 'Contactez SOMACOS à Meknès : +212 535 466 455, info@somacos.ma. Du lundi au vendredi de 8h à 19h, samedi et dimanche de 9h à 14h.',
+    description: 'Contactez SOMACOS à Meknès : +212 535 466 455, info@somacos.ma. Du lundi au vendredi de 8h30 à 17h30, samedi de 8h30 à 13h30.',
     body, jsonld: [ORG_LD, breadcrumbLd([['', 'Accueil'], ['contact/', 'Contact']])], scripts: ['assets/js/forms.js'] }));
 }
 
