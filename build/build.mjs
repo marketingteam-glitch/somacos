@@ -101,7 +101,7 @@ function header(rel, active, mode) {
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-header${mode === 'overlay' ? ' is-overlay' : ''}" data-header>
   <div class="wrap header-row">
-    <a class="logo" href="${rel}" aria-label="SOMACOS — accueil">${LOGO}<span class="logo-type"><b>SOMACOS</b><small>Commerce &amp; Service</small></span></a>
+    <a class="logo" href="${rel}" aria-label="SOMACOS — accueil">${LOGO}<span class="logo-type"><b>SOMACOS</b><small>SARL.AU</small></span></a>
     <nav class="main-nav" id="main-nav" aria-label="Navigation principale" data-nav>
       <ul class="nav-list">
         ${nav.map(link).join('')}
@@ -152,7 +152,7 @@ function footer(rel) {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="logo logo-light" href="${rel}">${LOGO}<span class="logo-type"><b>SOMACOS</b><small>Commerce &amp; Service</small></span></a>
+        <a class="logo logo-light" href="${rel}">${LOGO}<span class="logo-type"><b>SOMACOS</b><small>SARL.AU</small></span></a>
         <p>${e(SITE.legalName)}. Distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.</p>
         <a class="btn btn-lime btn-sm" href="${rel}devis/">Demander un devis ${I.arrow}</a>
       </div>
@@ -276,7 +276,7 @@ const partnerStrip = (rel) => `<section class="partners" aria-labelledby="partne
 
 // ---------------------------------------------------------------- pages
 const ORG_LD = {
-  '@context': 'https://schema.org', '@type': 'Organization', name: 'SOMACOS', legalName: SITE.legalName, url: SITE.url,
+  '@context': 'https://schema.org', '@type': 'Organization', name: SITE.name, legalName: SITE.legalName, url: SITE.url,
   email: SITE.emails[0], telephone: SITE.phones.map((p) => p.href.replace('tel:', '')),
   address: { '@type': 'PostalAddress', streetAddress: `${SITE.address[0]}, ${SITE.address[1]}`, addressLocality: 'Meknès', addressCountry: 'MA' },
 };
@@ -378,14 +378,14 @@ function home() {
 ${partnerStrip(rel)}
 ${ctaBand(rel)}`;
   write('index.html', page({ rel, file: 'index.html', title: '', active: 'home', headerMode: 'overlay', bodyClass: 'page-home',
-    description: 'SOMACOS, Société Marocaine de Commerce et Service à Meknès : distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.',
+    description: 'SOMACOS SARL.AU, SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU à Meknès : distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.',
     body, jsonld: [ORG_LD] }));
 }
 
 function about() {
   const rel = '../';
   const body = `
-${pageHero(rel, { eyebrow: 'À propos', title: 'Société Marocaine de Commerce et Service.', crumbs: [['', 'Accueil'], ['a-propos/', 'À propos']], photo: 'olive-grove', alt: 'Oliveraie et canal d’irrigation au Maroc' })}
+${pageHero(rel, { eyebrow: 'À propos', title: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU.', crumbs: [['', 'Accueil'], ['a-propos/', 'À propos']], photo: 'olive-grove', alt: 'Oliveraie et canal d’irrigation au Maroc' })}
 <section class="section">
   <div class="wrap about-grid">
     <div class="reveal"><p class="eyebrow">Notre histoire</p><h2 class="display-2">SOMACOS</h2></div>
