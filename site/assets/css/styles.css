@@ -139,7 +139,7 @@ body.has-overlay-header { padding-top: 0; }
 .site-header.is-overlay:not(.is-scrolled):not(.is-open) .logo-mark { color: var(--lime); }
 .logo-type { display: grid; line-height: 1; }
 .logo-type b { font-size: 21px; font-weight: 700; letter-spacing: .06em; }
-.logo-type small { font: 500 10px/1 var(--f-mono); letter-spacing: 0; text-transform: none; opacity: .7; margin-top: 5px; }
+.logo-type small { font: 500 8px/1.2 var(--f-mono); letter-spacing: .01em; text-transform: uppercase; opacity: .7; margin-top: 5px; }
 .logo-light { color: #fff; --logo-cut: var(--forest-900); }
 .logo-light .logo-mark { color: var(--lime); }
 
