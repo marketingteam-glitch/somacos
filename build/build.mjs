@@ -181,7 +181,7 @@ function footer(rel) {
 
 function page({ rel, file, title, description, active, headerMode = 'solid', body, jsonld = [], scripts = [], bodyClass = '', image }) {
   const canonical = SITE.url + '/' + file.replace(/index\.html$/, '');
-  const fullTitle = title ? `${title} — SOMACOS` : 'SOMACOS — Matériel d’irrigation agricole à Meknès';
+  const fullTitle = title ? `${title} — ${SITE.name}` : `${SITE.name} — Matériel d’irrigation agricole à Meknès`;
   const og = image ? `${SITE.url}/${image}` : `${SITE.url}/assets/img/photos/hero-drip-1100.webp`;
   return `<!doctype html>
 <html lang="fr">
@@ -194,7 +194,7 @@ function page({ rel, file, title, description, active, headerMode = 'solid', bod
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_MA">
-<meta property="og:site_name" content="SOMACOS">
+<meta property="og:site_name" content="${e(SITE.name)}">
 <meta property="og:title" content="${e(fullTitle)}">
 <meta property="og:description" content="${e(description)}">
 <meta property="og:url" content="${canonical}">
@@ -378,14 +378,14 @@ function home() {
 ${partnerStrip(rel)}
 ${ctaBand(rel)}`;
   write('index.html', page({ rel, file: 'index.html', title: '', active: 'home', headerMode: 'overlay', bodyClass: 'page-home',
-    description: 'SOMACOS SARL.AU, SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU à Meknès : distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.',
+    description: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU (SOMACOS SARL.AU) à Meknès : distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.',
     body, jsonld: [ORG_LD] }));
 }
 
 function about() {
   const rel = '../';
   const body = `
-${pageHero(rel, { eyebrow: 'À propos', title: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU.', crumbs: [['', 'Accueil'], ['a-propos/', 'À propos']], photo: 'olive-grove', alt: 'Oliveraie et canal d’irrigation au Maroc' })}
+${pageHero(rel, { eyebrow: 'À propos', title: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU', crumbs: [['', 'Accueil'], ['a-propos/', 'À propos']], photo: 'olive-grove', alt: 'Oliveraie et canal d’irrigation au Maroc' })}
 <section class="section">
   <div class="wrap about-grid">
     <div class="reveal"><p class="eyebrow">Notre histoire</p><h2 class="display-2">SOMACOS</h2></div>
