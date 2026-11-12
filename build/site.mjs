@@ -30,7 +30,7 @@ export const HOME_PARTNER = "Nos ingénieurs vous apportent leur expertise, des 
 
 // Texte de la page « À propos » d'origine.
 export const ABOUT = [
-  "La SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU « SOMACOS » s’est spécialisée depuis 2014 dans la distribution de matériels agricoles, d’irrigation, de revêtement de bassins, ainsi que dans l’étude et la réalisation de projets d’irrigation, auprès des professionnels du domaine ainsi que des particuliers à la recherche de conseils techniques.",
+  "La SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU, connue sous l’abréviation « SOMACOS SARL.AU » s’est spécialisée depuis 2014 dans la distribution de matériels agricoles, d’irrigation, de revêtement de bassins, ainsi que dans l’étude et la réalisation de projets d’irrigation, auprès des professionnels du domaine ainsi que des particuliers à la recherche de conseils techniques.",
   "La SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU s’appuie sur des vendeurs et technico-commerciaux très confirmés sur l’information des nouveaux produits et services.",
 ];
 
