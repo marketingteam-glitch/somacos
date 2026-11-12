@@ -4,8 +4,8 @@
 export const SITE = {
   // URL publique du nouveau site (utilisée pour les balises canonical, Open Graph et le sitemap).
   url: 'https://somacos.ma',
-  name: 'SOMACOS',
-  legalName: 'Société Marocaine de Commerce et Service',
+  name: 'SOMACOS SARL.AU',
+  legalName: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU',
   city: 'Meknès',
   address: ['Coop Al Khayrate', 'Commune rurale Sidi Slimane Moul Kifan', 'Meknès, Maroc'],
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=SOMACOS+Meknes+Maroc',
@@ -30,12 +30,12 @@ export const HOME_PARTNER = "Nos ingénieurs vous apportent leur expertise, des 
 
 // Texte de la page « À propos » d'origine.
 export const ABOUT = [
-  "La Société Marocaine de Commerce et Service « SOMACOS » s’est spécialisée depuis 2014 dans la distribution de matériels agricoles, d’irrigation, de revêtement de bassins, ainsi que dans l’étude et la réalisation de projets d’irrigation, auprès des professionnels du domaine ainsi que des particuliers à la recherche de conseils techniques.",
-  "La Société Marocaine de Commerce et Service s’appuie sur des vendeurs et technico-commerciaux très confirmés sur l’information des nouveaux produits et services.",
+  "La SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU « SOMACOS » s’est spécialisée depuis 2014 dans la distribution de matériels agricoles, d’irrigation, de revêtement de bassins, ainsi que dans l’étude et la réalisation de projets d’irrigation, auprès des professionnels du domaine ainsi que des particuliers à la recherche de conseils techniques.",
+  "La SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU s’appuie sur des vendeurs et technico-commerciaux très confirmés sur l’information des nouveaux produits et services.",
 ];
 
 export const VALUES = [
-  { title: 'Ambition', text: "La Société Marocaine de Commerce et Service a la volonté de participer activement au développement de l’irrigation agricole moderne et responsable." },
+  { title: 'Ambition', text: "La SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU a la volonté de participer activement au développement de l’irrigation agricole moderne et responsable." },
   { title: 'Fierté', text: "Depuis 12 ans, les produits et les services SOMACOS sont reconnus dans tout le Maroc, pour leur qualité et le développement de leur expertise." },
   { title: 'Innovation', text: "Notre mission est de participer au développement agricole et de répondre ainsi aux besoins de mise en culture, même de grands périmètres. Son objectif : l’autosuffisance alimentaire." },
 ];
