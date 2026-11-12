@@ -101,7 +101,7 @@ function header(rel, active, mode) {
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-header${mode === 'overlay' ? ' is-overlay' : ''}" data-header>
   <div class="wrap header-row">
-    <a class="logo" href="${rel}" aria-label="SOMACOS — accueil">${LOGO}<span class="logo-type"><b>SOMACOS</b><small>SARL.AU</small></span></a>
+    <a class="logo" href="${rel}" aria-label="SOMACOS — accueil">${LOGO}<span class="logo-type"><b>${e(SITE.name)}</b><small>${e(SITE.legalName)}</small></span></a>
     <nav class="main-nav" id="main-nav" aria-label="Navigation principale" data-nav>
       <ul class="nav-list">
         ${nav.map(link).join('')}
@@ -152,7 +152,7 @@ function footer(rel) {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="logo logo-light" href="${rel}">${LOGO}<span class="logo-type"><b>SOMACOS</b><small>SARL.AU</small></span></a>
+        <a class="logo logo-light" href="${rel}">${LOGO}<span class="logo-type"><b>${e(SITE.name)}</b><small>${e(SITE.legalName)}</small></span></a>
         <p>${e(SITE.legalName)}. Distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.</p>
         <a class="btn btn-lime btn-sm" href="${rel}devis/">Demander un devis ${I.arrow}</a>
       </div>
