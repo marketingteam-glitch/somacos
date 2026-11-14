@@ -138,7 +138,7 @@ body.has-overlay-header { padding-top: 0; }
 .logo-mark { width: 34px; height: 34px; color: var(--forest-800); transition: color .3s; }
 .site-header.is-overlay:not(.is-scrolled):not(.is-open) .logo-mark { color: var(--lime); }
 .logo-type { display: block; min-width: 0; line-height: 1.2; }
-.logo-type b { display: block; font-size: clamp(8px, .78vw, 11px); line-height: 1.3; font-weight: 700; letter-spacing: .015em; white-space: normal; overflow-wrap: anywhere; }
+.logo-type b { display: block; font-size: clamp(10px, .85vw, 13px); line-height: 1.25; font-weight: 700; letter-spacing: .005em; white-space: normal; overflow-wrap: anywhere; }
 .logo-type small { display: none; }
 .logo-light { color: #fff; --logo-cut: var(--forest-900); }
 .logo-light .logo-mark { color: var(--lime); }
@@ -563,7 +563,7 @@ body.has-overlay-header { padding-top: 0; }
 
 @media (max-width: 1023px) {
   .logo { max-width: min(72vw, 520px); }
-  .logo-type b { font-size: clamp(8px, 1.1vw, 11px); }
+   .logo-type b { font-size: clamp(10px, 1.1vw, 13px); }
   :root { --header-h: 68px; }
   .menu-btn { display: inline-grid; }
   .header-cta { display: none; }
@@ -621,7 +621,7 @@ body.has-overlay-header { padding-top: 0; }
 
 @media (max-width: 720px) {
   .logo { max-width: calc(100vw - 112px); gap: 9px; }
-  .logo-type b { font-size: clamp(8px, 2.15vw, 10px); line-height: 1.25; }
+   .logo-type b { font-size: clamp(9px, 2.4vw, 11px); line-height: 1.25; }
   .hero-media::after { background: linear-gradient(0deg, rgba(7, 32, 25, .96) 0%, rgba(7, 32, 25, .82) 55%, rgba(7, 32, 25, .6) 100%); }
   .hero-facts-row { grid-template-columns: 1fr 1fr; }
   .hero-facts-row > div { padding: 18px 12px 20px 0; }
