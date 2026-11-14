@@ -172,7 +172,7 @@ function footer(rel) {
     <div class="footer-bottom">
       <p>© <span data-year>2026</span> ${e(SITE.legalName)}</p>
       <details class="credits"><summary>Crédits photos</summary>
-        <p>Photographies produits : SOMACOS. Photographies d’ambiance via Wikimedia Commons : ${PHOTO_CREDITS.map((c) => `<a href="${c.url}" rel="noopener" target="_blank">${e(c.title)}</a> — ${e(c.author)} (${c.license})`).join(' · ')}.</p>
+        <p>Photographies produits : SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU. Photographies d’ambiance via Wikimedia Commons : ${PHOTO_CREDITS.map((c) => `<a href="${c.url}" rel="noopener" target="_blank">${e(c.title)}</a> — ${e(c.author)} (${c.license})`).join(' · ')}.</p>
       </details>
     </div>
   </div>
@@ -324,7 +324,7 @@ function home() {
   <div class="wrap">
     <div class="section-head reveal">
       <div><p class="eyebrow">Catégories</p><h2 class="display-2" id="cat-title">De la vanne au goutteur.</h2></div>
-      <p>Les ${TOTAL_CATS} catégories du catalogue SOMACOS, regroupées en ${FAMILIES.length} familles.</p>
+      <p>Les ${TOTAL_CATS} catégories du catalogue de la société, regroupées en ${FAMILIES.length} familles.</p>
     </div>
     <div class="fam-grid">
       ${FAMILIES.map((f, i) => `<a class="fam-tile reveal" href="${rel}catalogue/?famille=${f.id}" style="--d:${(i % 4) * 60}ms">
@@ -363,7 +363,7 @@ function home() {
 
 <section class="section" aria-labelledby="why-title">
   <div class="wrap">
-    <div class="section-head reveal"><div><p class="eyebrow">Pourquoi SOMACOS</p><h2 class="display-2" id="why-title">Une expertise reconnue dans tout le Maroc.</h2></div></div>
+    <div class="section-head reveal"><div><p class="eyebrow">Notre société</p><h2 class="display-2" id="why-title">Une expertise reconnue dans tout le Maroc.</h2></div></div>
     <div class="why-grid">
       <div class="why reveal"><b class="why-k">12 ans</b><h3>D’expérience</h3><p>Une expérience de 12 ans dans l’irrigation agricole.</p></div>
       <div class="why reveal"><b class="why-k">${PARTNERS.length}</b><h3>Marques de fabricants</h3><p>Des systèmes d’irrigation qui proviennent des meilleurs fabricants mondiaux.</p></div>
@@ -378,7 +378,7 @@ function home() {
 ${partnerStrip(rel)}
 ${ctaBand(rel)}`;
   write('index.html', page({ rel, file: 'index.html', title: '', active: 'home', headerMode: 'overlay', bodyClass: 'page-home',
-    description: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU (SOMACOS SARL.AU) à Meknès : distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.',
+    description: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU à Meknès : distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.',
     body, jsonld: [ORG_LD] }));
 }
 
@@ -569,7 +569,7 @@ function catalogue() {
 function categoriesIndex() {
   const rel = '../';
   const body = `
-${pageHero(rel, { eyebrow: 'Catégories', title: `${TOTAL_CATS} catégories, ${FAMILIES.length} familles.`, lead: 'Tout le matériel entre la pompe et la plante, classé comme dans le catalogue SOMACOS.', crumbs: [['', 'Accueil'], ['categories/', 'Catégories']] })}
+${pageHero(rel, { eyebrow: 'Catégories', title: `${TOTAL_CATS} catégories, ${FAMILIES.length} familles.`, lead: 'Tout le matériel entre la pompe et la plante, classé comme dans le catalogue de la société.', crumbs: [['', 'Accueil'], ['categories/', 'Catégories']] })}
 <section class="section section-tight">
   <div class="wrap">
     ${FAMILIES.map((f, i) => `<div class="cat-family reveal">
