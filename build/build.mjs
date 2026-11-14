@@ -101,7 +101,7 @@ function header(rel, active, mode) {
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-header${mode === 'overlay' ? ' is-overlay' : ''}" data-header>
   <div class="wrap header-row">
-    <a class="logo" href="${rel}" aria-label="SOMACOS — accueil">${LOGO}<span class="logo-type"><b>${e(SITE.name)}</b><small>${e(SITE.legalName)}</small></span></a>
+    <a class="logo" href="${rel}" aria-label="${e(SITE.legalName)}">${LOGO}<span class="logo-type"><b>${e(SITE.legalName)}</b></span></a>
     <nav class="main-nav" id="main-nav" aria-label="Navigation principale" data-nav>
       <ul class="nav-list">
         ${nav.map(link).join('')}
@@ -152,8 +152,8 @@ function footer(rel) {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="logo logo-light" href="${rel}">${LOGO}<span class="logo-type"><b>${e(SITE.name)}</b><small>${e(SITE.legalName)}</small></span></a>
-        <p>${e(SITE.legalName)}. Distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.</p>
+        <a class="logo logo-light" href="${rel}">${LOGO}<span class="logo-type"><b>${e(SITE.legalName)}</b></span></a>
+        <p>Distribution de matériel agricole et d’irrigation, revêtement de bassins, étude et réalisation de projets d’irrigation.</p>
         <a class="btn btn-lime btn-sm" href="${rel}devis/">Demander un devis ${I.arrow}</a>
       </div>
       <nav class="footer-col" aria-label="Pages"><h2>Pages</h2><ul>
@@ -181,7 +181,7 @@ function footer(rel) {
 
 function page({ rel, file, title, description, active, headerMode = 'solid', body, jsonld = [], scripts = [], bodyClass = '', image }) {
   const canonical = SITE.url + '/' + file.replace(/index\.html$/, '');
-  const fullTitle = title ? `${title} — ${SITE.name}` : `${SITE.name} — Matériel d’irrigation agricole à Meknès`;
+  const fullTitle = title ? `${title} — ${SITE.legalName}` : `${SITE.legalName} — Matériel d’irrigation agricole à Meknès`;
   const og = image ? `${SITE.url}/${image}` : `${SITE.url}/assets/img/photos/hero-drip-1100.webp`;
   return `<!doctype html>
 <html lang="fr">
@@ -194,7 +194,7 @@ function page({ rel, file, title, description, active, headerMode = 'solid', bod
 <link rel="canonical" href="${canonical}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_MA">
-<meta property="og:site_name" content="${e(SITE.name)}">
+<meta property="og:site_name" content="${e(SITE.legalName)}">
 <meta property="og:title" content="${e(fullTitle)}">
 <meta property="og:description" content="${e(description)}">
 <meta property="og:url" content="${canonical}">
@@ -315,7 +315,7 @@ function home() {
     <div class="intro-text reveal">
       <p class="lead">${e(ABOUT[0])}</p>
       <p>${e(ABOUT[1])}</p>
-      <a class="link-arrow" href="${rel}a-propos/">Découvrir SOMACOS ${I.arrow}</a>
+      <a class="link-arrow" href="${rel}a-propos/">Découvrir la société ${I.arrow}</a>
     </div>
   </div>
 </section>
@@ -388,7 +388,7 @@ function about() {
 ${pageHero(rel, { eyebrow: 'À propos', title: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU', crumbs: [['', 'Accueil'], ['a-propos/', 'À propos']], photo: 'olive-grove', alt: 'Oliveraie et canal d’irrigation au Maroc' })}
 <section class="section">
   <div class="wrap about-grid">
-    <div class="reveal"><p class="eyebrow">Notre histoire</p><h2 class="display-2">SOMACOS</h2></div>
+    <div class="reveal"><p class="eyebrow">Notre histoire</p><h2 class="display-2">${e(SITE.legalName)}</h2></div>
     <div class="about-text reveal">
       <p class="lead">${e(ABOUT[0])}</p>
       <p>${e(ABOUT[1])}</p>
@@ -415,7 +415,7 @@ ${pageHero(rel, { eyebrow: 'À propos', title: 'SOCIETE MAROCAINE DE COMMERCE ET
 ${partnerStrip(rel)}
 ${ctaBand(rel)}`;
   write('a-propos/index.html', page({ rel, file: 'a-propos/index.html', title: 'À propos', active: 'about', headerMode: 'overlay',
-    description: 'SOMACOS s’est spécialisée depuis 2014 dans la distribution de matériels agricoles, d’irrigation, de revêtement de bassins et dans l’étude et la réalisation de projets d’irrigation.',
+    description: 'SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU s’est spécialisée depuis 2014 dans la distribution de matériels agricoles, d’irrigation, de revêtement de bassins et dans l’étude et la réalisation de projets d’irrigation.',
     body, jsonld: [ORG_LD, breadcrumbLd([['', 'Accueil'], ['a-propos/', 'À propos']])] }));
 }
 
@@ -484,7 +484,7 @@ ${pageHero(rel, { eyebrow: 'Contact', title: 'Contactez-nous.', lead: 'Notre pri
   </div>
 </section>`;
   write('contact/index.html', page({ rel, file: 'contact/index.html', title: 'Contact', active: 'contact',
-    description: 'Contactez SOMACOS à Meknès : +212 535 466 455, info@somacos.ma. Du lundi au vendredi de 8h30 à 17h30, samedi de 8h30 à 13h30.',
+    description: 'Contactez SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU à Meknès : +212 535 466 455, info@somacos.ma. Du lundi au vendredi de 8h30 à 17h30, samedi de 8h30 à 13h30.',
     body, jsonld: [ORG_LD, breadcrumbLd([['', 'Accueil'], ['contact/', 'Contact']])], scripts: ['assets/js/forms.js'] }));
 }
 
@@ -520,7 +520,7 @@ ${pageHero(rel, { eyebrow: 'Demande de devis', title: 'Votre demande de devis.',
   </div>
 </section>`;
   write('devis/index.html', page({ rel, file: 'devis/index.html', title: 'Demande de devis', active: '',
-    description: 'Demandez un devis à SOMACOS pour votre matériel d’irrigation : goutte-à-goutte, aspersion, filtration, vannes, raccords PP et PVC, revêtement de bassins.',
+    description: 'Demandez un devis à SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU pour votre matériel d’irrigation : goutte-à-goutte, aspersion, filtration, vannes, raccords PP et PVC, revêtement de bassins.',
     body, scripts: ['assets/js/forms.js'] }));
 }
 
@@ -535,7 +535,7 @@ function catalogue() {
   <div class="wrap page-hero-inner">
     ${breadcrumb(rel, [['', 'Accueil'], ['catalogue/', 'Catalogue']])}
     <p class="eyebrow">Catalogue</p>
-    <h1 class="page-title">Le catalogue SOMACOS.</h1>
+    <h1 class="page-title">Le catalogue</h1>
     <p class="page-lead">${products.length} produits et ${TOTAL_REFS} références : micro-irrigation, raccords PP et PVC, filtration, vannes, aspersion, revêtement de bassins.</p>
   </div>
 </section>
@@ -562,7 +562,7 @@ function catalogue() {
   </div>
 </section>`;
   write('catalogue/index.html', page({ rel, file: 'catalogue/index.html', title: 'Catalogue', active: 'catalogue',
-    description: `Catalogue SOMACOS : ${products.length} produits d’irrigation — goutteurs, gaine goutte-à-goutte, raccords PP et PVC, filtres, vannes, aspersion, géomembrane.`,
+    description: `Catalogue SOCIETE MAROCAINE DE COMMERCE ET SERVICE SARL.AU : ${products.length} produits d’irrigation — goutteurs, gaine goutte-à-goutte, raccords PP et PVC, filtres, vannes, aspersion, géomembrane.`,
     body, jsonld: [breadcrumbLd([['', 'Accueil'], ['catalogue/', 'Catalogue']])], scripts: ['assets/js/catalogue-data.js', 'assets/js/catalogue.js'] }));
 }
 
@@ -579,7 +579,7 @@ ${pageHero(rel, { eyebrow: 'Catégories', title: `${TOTAL_CATS} catégories, ${F
   </div>
 </section>`;
   write('categories/index.html', page({ rel, file: 'categories/index.html', title: 'Catégories', active: 'catalogue',
-    description: 'Toutes les catégories de produits SOMACOS : micro-irrigation, accessoires PP et PVC, filtration et fertilisation, vannes et clapets, aspersion, revêtement de bassins.',
+    description: 'Toutes les catégories de produits de la société : micro-irrigation, accessoires PP et PVC, filtration et fertilisation, vannes et clapets, aspersion, revêtement de bassins.',
     body, jsonld: [breadcrumbLd([['', 'Accueil'], ['categories/', 'Catégories']])] }));
 }
 
@@ -607,7 +607,7 @@ function categoryPage(c) {
 </section>
 ${ctaBand(rel)}`;
   write(`categories/${c}/index.html`, page({ rel, file: `categories/${c}/index.html`, title: CATEGORIES[c].name, active: 'catalogue',
-    description: `${CATEGORIES[c].name} : ${list.length} produits SOMACOS — ${list.slice(0, 4).map((p) => p.display).join(', ')}…`,
+    description: `${CATEGORIES[c].name} : ${list.length} produits — ${list.slice(0, 4).map((p) => p.display).join(', ')}…`,
     body, jsonld: [breadcrumbLd(crumbs)] }));
 }
 
@@ -664,11 +664,11 @@ ${table}
   </div>
 </section>
 <div class="lightbox" data-lightbox-panel hidden role="dialog" aria-modal="true" aria-label="Image agrandie"><button class="icon-btn lightbox-close" type="button" aria-label="Fermer" data-lightbox-close>${I.close}</button><img alt="${e(p.display)}"></div>`;
-  const ld = { '@context': 'https://schema.org', '@type': 'Product', name: p.display, image: `${SITE.url}/assets/img/products/${p.img}-lg.webp`, category: p.catInfo.name, brand: { '@type': 'Brand', name: /GREENPLAINS/.test(p.name) ? 'GreenPlains' : /SUNSTREAM/.test(p.name) ? 'Sunstream' : /SERTSAN/.test(p.name) ? 'Sertsan' : 'SOMACOS' } };
+  const ld = { '@context': 'https://schema.org', '@type': 'Product', name: p.display, image: `${SITE.url}/assets/img/products/${p.img}-lg.webp`, category: p.catInfo.name, brand: { '@type': 'Brand', name: /GREENPLAINS/.test(p.name) ? 'GreenPlains' : /SUNSTREAM/.test(p.name) ? 'Sunstream' : /SERTSAN/.test(p.name) ? 'Sertsan' : SITE.legalName } };
   if (p.rows[0]) ld.sku = p.rows[0][0];
   if (typeof p.desc[0] === 'string') ld.description = p.desc[0];
   write(`produits/${p.slug}/index.html`, page({ rel, file: `produits/${p.slug}/index.html`, title: p.display, active: 'catalogue',
-    description: `${p.display} — ${p.catInfo.name}. ${p.refCount ? `${p.refCount} référence(s) : ${p.rows.slice(0, 3).map((r) => r[1] || r[0]).join(', ')}.` : ''} Demandez un devis à SOMACOS, Meknès.`.slice(0, 300),
+    description: `${p.display} — ${p.catInfo.name}. ${p.refCount ? `${p.refCount} référence(s) : ${p.rows.slice(0, 3).map((r) => r[1] || r[0]).join(', ')}.` : ''} Demandez un devis à ${SITE.legalName}, Meknès.`.slice(0, 300),
     body, image: `assets/img/products/${p.img}-lg.webp`, jsonld: [ld, breadcrumbLd(crumbs)] }));
 }
 
